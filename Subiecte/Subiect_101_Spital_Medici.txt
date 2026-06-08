@@ -1,0 +1,75 @@
+SUBIECT 101 - SPITAL (Medici / Consultatii)
+
+Date de intrare:
+
+a) Baza de date SQLite "S101_spital.db" contine informatii despre medicii unui
+   spital, in tabela Medici:
+
+   IdMedic       INTEGER PRIMARY KEY
+   Nume          TEXT NOT NULL
+   Specialitate  TEXT NOT NULL
+   Tarif         INTEGER NOT NULL    (tariful unei consultatii, in lei)
+
+   Exemplu continut tabel Medici:
+   1, Andrei Popescu,   Cardiologie,  200
+   2, Maria Ionescu,    Dermatologie, 150
+   3, Ion Dumitrescu,   Neurologie,   250
+   ...
+
+b) Fisierul text "S101_consultatii.csv" contine consultatiile efectuate (prima
+   linie este antetul), in formatul:
+
+   idConsultatie,idMedic,numePacient,durataMin
+
+   Exemplu:
+   idConsultatie,idMedic,numePacient,durataMin
+   1,1,Gheorghe Vasile,30
+   2,1,Ana Marin,45
+   3,3,Vasile Popa,20
+   ...
+
+Intre un medic si consultatiile sale exista o relatie one-to-many: un medic poate
+avea mai multe consultatii, iar fiecare consultatie apartine unui singur medic
+(identificat prin idMedic).
+
+Sa se scrie o aplicatie Java care sa indeplineasca urmatoarele cerinte. Fiecare
+cerinta isi afiseaza rezultatul precedat de eticheta "CERINTA n:".
+
+CERINTE:
+
+1) (2p) Sa se citeasca medicii din baza de date si sa se afiseze medicii cu
+        tariful strict mai mare decat 150, ordonati descrescator dupa tarif, in
+        formatul:
+        Nume, Specialitate, Tarif
+
+        Exemplu:
+        CERINTA 1:
+        Ion Dumitrescu, Neurologie, 250
+        Andrei Popescu, Cardiologie, 200
+        ...
+
+2) (2p) Sa se citeasca consultatiile din fisierul text si sa se afiseze numarul
+        de consultatii pentru fiecare medic, ordonat crescator dupa codul
+        medicului, in formatul:
+        Medic <idMedic> - <numar> consultatii
+
+        Exemplu:
+        CERINTA 2:
+        Medic 1 - 4 consultatii
+        Medic 2 - 2 consultatii
+        ...
+
+3) (3p) Sa se genereze fisierul JSON "raport_medici.json" care sa contina medicii
+        ordonati descrescator dupa venitul estimat. Pentru fiecare medic se vor
+        include codul, numele, numarul de consultatii si venitul estimat.
+
+        Venitul estimat se calculeaza ca: Tarif * numarul de consultatii ale
+        medicului.
+
+        Formatul fisierului:
+        [
+          ...
+        ]
+
+(NOTA: continutul exact al formatului JSON de la cerinta 3 era taiat in poza.
+Daca exista o cerinta 4, aceasta nu era vizibila.)

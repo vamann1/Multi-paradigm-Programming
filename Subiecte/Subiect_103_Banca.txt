@@ -1,0 +1,75 @@
+SUBIECT 103 - BANCA (Conturi / Tranzactii)
+
+Date de intrare:
+
+a) Baza de date SQLite "S103_conturi.db" contine conturile clientilor, in tabela
+   Conturi:
+
+   IdCont       INTEGER PRIMARY KEY
+   Titular      TEXT NOT NULL
+   SoldInitial  INTEGER NOT NULL    (soldul initial al contului, in lei)
+
+   Exemplu continut tabel Conturi:
+   1, Ana Pop,        1000
+   2, Bogdan Ilie,     500
+   3, Carmen Vasile,  2000
+   ...
+
+b) Fisierul JSON "S103_tranzactii.json" contine tranzactiile efectuate, in
+   formatul:
+
+   [
+     { "IdCont": 1, "Suma": 200 },
+     { "IdCont": 1, "Suma": -50 },
+     ...
+   ]
+
+O suma pozitiva reprezinta o alimentare, iar o suma negativa o retragere. Pot
+exista mai multe tranzactii pentru acelasi cont.
+
+Intre un cont si tranzactiile sale exista o relatie one-to-many: un cont poate
+avea mai multe tranzactii, iar fiecare tranzactie apartine unui singur cont
+(prin IdCont).
+
+Sa se scrie o aplicatie Java care sa indeplineasca urmatoarele cerinte. Fiecare
+cerinta isi afiseaza rezultatul precedat de eticheta "CERINTA n:".
+
+CERINTE:
+
+1) (2p) Sa se citeasca conturile din baza de date si sa se afiseze conturile cu
+        soldul initial strict mai mare decat 600, ordonate descrescator dupa
+        soldul initial, in formatul:
+        Titular, SoldInitial
+
+        Exemplu:
+        CERINTA 1:
+        Carmen Vasile, 2000
+        Elena Toma, 1500
+        ...
+
+2) (2p) Sa se citeasca tranzactiile din fisierul JSON si sa se afiseze suma totala
+        a tranzactiilor pentru fiecare cont, ordonat crescator dupa id-ul
+        contului, in formatul:
+        Cont <IdCont>: <suma>
+
+        Exemplu:
+        CERINTA 2:
+        Cont 1: 150
+        Cont 2: 400
+        Cont 3: -700
+        ...
+
+3) (3p) Sa se genereze fisierul JSON "raport_solduri.json" care sa contina
+        conturile ordonate descrescator dupa soldul final. Pentru fiecare cont se
+        vor include id-ul, titularul si soldul final.
+
+        Soldul final se calculeaza ca: SoldInitial + suma totala a tranzactiilor
+        contului.
+
+        Formatul fisierului:
+        [
+          ...
+        ]
+
+(NOTA: continutul exact al formatului JSON de la cerinta 3 era taiat in poza.
+Daca exista o cerinta 4, aceasta nu era vizibila.)

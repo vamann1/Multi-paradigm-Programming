@@ -1,0 +1,62 @@
+SUBIECT 4 - PANIFICATIE (Produse / Materii prime)
+
+Fie un fisier JSON care contine produse de panificatie. Fiecare produs are o
+lista de materii prime utilizate in fabricatie (cu "Cod materie prima" si
+"Cantitate"), precum si "Cantitate" (cantitatea produsa) si "Unitate masura".
+
+(NOTA: antetul complet al fisierului JSON era taiat in poza. Mai jos este partea
+vizibila din structura.)
+
+  ...
+        "Cantitate": 5
+      },
+      {
+        "Cod materie prima": 4,
+        "Cantitate": 3
+      }
+    ],
+    "Cantitate": 1000,
+    "Unitate masura": "bucati"
+  },
+  ...
+]
+
+Sa se scrie o aplicatie Java care sa rezolve urmatoarele cerinte:
+
+1) Sa se afiseze la consola valoarea totala a materiilor prime.
+   Punctaj: 2 puncte
+   Criteriu de acordare a punctajului: afisarea corecta la consola.
+
+2) Sa se afiseze la consola produsele de panificatie sortate descrescator dupa
+   numarul de materii prime utilizate in fabricatie.
+   Punctaj: 2 puncte
+   Criteriu de acordare a punctajului: afisarea corecta la consola.
+
+3) Sa se salveze in fisierul stoc.xml stocul final de materii prime (dupa
+   scaderea cantitatilor intrate in fabricatie), in formatul:
+
+   <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+   <materii_prime>
+       <materie_prima cod="1" denumire="Faina 650" valoare="38800.0"/>
+   ...
+   </materii_prime>
+
+   unde valoare este cantitatea ramasa inmultita cu pretul unitar.
+   Punctaj: 2 puncte
+   Criteriu de acordare a punctajului: afisarea corecta la consola
+
+4) Sa implementeze functionalitatile de server si client TCP/IP si sa se execute
+   urmatorul scenariu:
+   - componenta client trimite serverului codul unui produs
+   - componenta server va intoarce cantitatea produsa din produsul respectiv
+   - componenta server poate servi oricati clienti.
+   Punctaj: 3 puncte
+   Criteriu de acordare a punctajului: 2 puncte pentru afisare la consola
+   comunicare corecta client-server, 1 punct pentru implementare in care serverul
+   poate servi oricati clienti.
+
+Observatii:
+- 1p din oficiu
+- criteriu de acordare a punctajului: afisarea corecta conform cerintei
+- nu se acorda punctaj partial pentru cerinte
+- nu se acorda punctaj pentru programe cu erori de compilare sau de executie

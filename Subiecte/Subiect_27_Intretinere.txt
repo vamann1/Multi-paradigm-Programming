@@ -1,0 +1,56 @@
+SUBIECT 27 - INTRETINERE / FACTURI
+
+Fie datele de intrare (in directorul date):
+
+a) S27_intretinere_facturi.txt: lista de facturi
+   (denumire - string, repartizare - string, valoare - double)
+   fisier text de forma:
+
+   Gaze naturale,persoane,140
+   Apa calda,persoane,800
+   Caldura,suprafata,300
+   Gunoi,apartament,100
+
+   Campul repartizare poate avea urmatoarele valori: apartament, suprafata sau
+   persoane.
+   Denumirea facturii nu poate contine caracterul virgula.
+
+b) tabela Apartamente din baza de date SQLite S27_intretinere.db cu urmatoarele
+   campuri:
+   NumarApartament - integer
+   Suprafata       - integer
+   NumarPersoane   - integer
+
+Sa se scrie o aplicatie Java care sa indeplineasca urmatoarele cerinte:
+
+1. (2p) Sa se citeasca facturile din fisierul text si sa se afiseze la consola
+        denumirea si valoarea facturii cu valoarea maxima.
+
+2. (2p) Sa se citeasca din baza de date si sa se afiseze la consola lista
+        apartamentelor cu cel putin doua persoane sortate DEScrescator dupa
+        numarul apartamentului.
+
+3. (3p) Sa se scrie in fisierul text date\sumar.txt numarul de facturi si
+        valoarea totala pentru fiecare tip de repartizare in ordinea
+        descrescatoare a valorii totale:
+
+        Tip Repartizare, Total Facturi, Numar Facturi
+        ...
+
+        Tabelul trebuie sa fie sortat in functie de numarul apartamentului.
+        (1p - scriere tipuri de repartizare existente in datele de intrare in
+        fisier, 1p - calcul corect numar si valoare totala, 1p - sortare)
+
+4. (2p) Sa se implementeze functionalitatile de server si client TCP/IP si sa se
+        execute urmatorul scenariu: componenta client trimite serverului un numar
+        de apartament iar componenta server va intoarce clientului suprafata
+        acestuia.
+        Server-ul este pornit pe thread secundar din functia main.
+        Server-ul se opreste dupa ce a servit o conexiune.
+        Codul client trebuie sa se execute pe firul principal.
+
+Observatii:
+1p din oficiu
+Criteriu de acordare a punctajului: afisarea corecta conform cerintei
+Nu se acorda punctaj partial pentru cerinte
+Nu se acorda punctaj pentru programe cu erori de compilare sau de executie

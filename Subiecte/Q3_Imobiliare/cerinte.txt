@@ -1,0 +1,59 @@
+Avem urmatoarele date de intrare referitoare la activitatea de tranzactionare a unei agentii imobiliare:
+
+agenti.txt - Informatii referitoare la agentii imobiliari ai agentiei:
+cod agent (numar intreg),nume agent (text), numar telefon (text)
+Exemplu:
+1,Popescu Marian,0740298563
+2,Ionescu Dan,0722541247
+...
+
+agentia.db - Baza de date Sqlite referitoare la imobile. Imobilele sunt memorate in tabela IMOBILE
+care are structura conform urmatoarei comenzii de creare:
+CREATE TABLE "IMOBILE" (
+	"cod_imobil"	INTEGER,
+	"cod_agent"	INTEGER,
+	"tip_imobil"	TEXT,
+	"pret"	REAL,
+	PRIMARY KEY("cod_imobil")
+)
+cod_agent se refera la agentul care are in portofoliu imobilul respectiv.
+tip_imobil poate fi doar: "apartament", "casa" sau "teren".
+
+Cerinte:
+1) Sa se afiseze la consola agentii imobiliari. Pentru fiecare agent se va afisa codul, numele si numarul de telefon.
+Barem: 2 puncte
+Criteriu de acordare a baremului: afisarea corecta a agentilor
+
+2) Sa se afiseze la consola numarul de imobile aflate in portofoliu pentru fiecare agent.
+Pentru fiecare agent se va afisa numele agentului si numarul de imobile.
+Barem: 2 puncte
+Criteriu de acordare a baremului: afisarea corecta a rezultatului (n linii, unde
+n este numarul de agenti)
+
+3) Sa se salveze in fisierul jurnal.txt, pentru fiecare agent, preturile imobilelor pe tipuri de imobil, astfel:
+nume_agent_1
+apartament: pret_1,pret_2, ...
+casa: pret_1,pret_2,...
+teren: pret_1,pret_2, ...
+nume_agent_2
+apartament: pret_1,pret_2, ...
+casa: pret_1,pret_2,...
+teren: pret_1,pret_2, ...
+...
+Barem: 2 puncte
+Criteriu de acordare: urmarirea continutului fisierului jurnal.txt
+
+
+4) Să se implementeze funcționalitățile de server și client TCP/IP și să se execute următorul scenariu:
+    - componenta client trimite serverului un cod de imobil;
+    - componenta server va întoarce clientului lista datele agentului care are în portofoliu imobilul respectiv.
+    - serverul va fi pornit din programul principal pe un fir de execuție nou și va servi o singură cerere
+
+Punctaj: 3 puncte (2p - comunicare corecta client / server; 1p - pornire server pe fir de execuție nou)
+Criteriu de acordare a punctajului: afișarea corectă la consolă
+
+Observatii:
+- 1p din oficiu
+- criteriu de acordare a punctajului: afișarea corectă conform cerinței
+- nu se acordă punctaj parțial pentru cerințe
+- nu se acordă punctaj pentru programe cu erori de compilare sau de execuție

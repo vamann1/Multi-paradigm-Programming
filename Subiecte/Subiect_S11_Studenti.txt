@@ -1,0 +1,72 @@
+SUBIECT S11 - STUDENTI / NOTE
+
+Fie datele de intrare in:
+
+a) Fisierul JSON "S11_studenti.json" continand informatii despre studenti:
+   IdStudent (integer)
+   Nume (string)
+   Prenume (string)
+
+   Exemplu continut fisier "S11_studenti.json":
+   [
+     {
+       "IdStudent": 1,
+       "Nume": "Istrate",
+       "Prenume": "Mihai"
+     },
+     {
+       "IdStudent": 2,
+       "Nume": "Turcu",
+       "Prenume": "Emilia"
+     },
+     {
+       "IdStudent": 3,
+       "Nume": "Popescu",
+       "Prenume": "Maria"
+     },
+     ...
+   ]
+
+b) Fisierul text "S11_note.txt" cu urmatoarele informatii pe fiecare linie:
+   IdStudent (integer)
+   Materie (string, nu poate contine caracterul virgula)
+   Nota (double)
+
+   Se presupune ca un student are cel mult o nota la o materie.
+
+   Exemplu:
+   1,PAW,9
+   2,Java,9
+   2,SD,8.5
+   ...
+
+Cerinte:
+
+2p - 1) Sa se citeasca datele din fisierul "S11_studenti.json" si sa se afiseze
+        la consola numarul total de studenti.
+        Exemplu:
+        1) - Numar total studenti: 17
+
+3p - 2) Sa se citeasca datele din fisierul "S11_note.txt" si sa se afiseze la
+        consola numarul de note pentru fiecare disciplina
+        (1.5 puncte pentru afisarea listei de discipline)
+        Exemplu:
+        2) - Lista discipline:
+        Java - 2 note
+        SD   - 4 note
+
+2p - 3) Pentru o denumire de materie introdusa de la consola sa se afiseze
+        catalogul in formatul:
+        Nume Student, Prenume Student, Nota
+
+2p - 4) Sa se implementeze functionalitatile de server si client TCP/IP si sa se
+        execute urmatorul scenariu:
+        - componenta client trimite serverului un ID de student si o materie;
+        - componenta server va intoarce clientului nota obtinuta de student la
+          materia respectiva.
+
+Observatii:
+- 1p din oficiu
+- criteriu de acordare a punctajului: afisarea corecta conform cerintei
+- nu se acorda punctaj partial pentru cerinte
+- nu se acorda punctaj pentru programe cu erori de compilare sau de executie

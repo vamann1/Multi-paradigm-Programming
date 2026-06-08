@@ -1,0 +1,47 @@
+SUBIECT 2 - SPITAL DE URGENTA (Sectii / Pacienti)
+
+1p oficiu + 9p subiect
+
+In fisierul sectii.json se gasesc informatii privind sectiile unui spital de
+urgenta. Fisierul este structurat astfel:
+
+[
+  {
+    "cod_sectie": 1,
+    "denumire": "ORL",
+    "numar_locuri": 10
+  },
+  ...
+]
+
+Baza de date SQLite spital.db contine tabela Pacienti in care se afla informatii
+privind pacientii internati, cate o inregistrare pentru fiecare pacient, astfel:
+
+CNP        |NumePacient       |VarstaPacient|CodSectie|
+-----------+------------------+-------------+---------+
+223495443  |Pastrascu Aurelia |          37 |       1 |
+123495443  |Iftimie Daniel    |          53 |       1 |
+223349543  |Marcut Cornelia   |          47 |       2 |
+...
+
+CNP-ul este de tip long, numele este sir de caractere iar codul sectiei si varsta
+sunt intregi.
+
+Sa se scrie o aplicatie Java care sa indeplineasca urmatoarele cerinte:
+
+1) Sa afiseze la consola lista sectiilor spitalului cu un numar de locuri strict
+   mai mare decat 5.
+   Punctaj: 2 puncte
+   Criteriu de acordare a punctajului: afisarea corecta la consola
+
+2) Sa afiseze la consola un raport al internarilor pe sectii, de forma:
+
+   Cod sectie       Denumire sectie      Numar pacienti
+   1                ORL                  2
+   2                DERMATOLOGIE         2
+   ...
+
+   Punctaj: 2 puncte
+   Criteriu de acordare a punctajului: afisarea corecta la consola
+
+(NOTA: cerintele 3 si 4 nu erau vizibile in poza - continutul era taiat.)

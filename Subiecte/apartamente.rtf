@@ -1,0 +1,127 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2870
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab560
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\fs26 \cf0 SUBIECTUL 1 \'96 V\'c2NZAREA APARTAMENTELOR\
+Total: 90 puncte + 10 puncte din oficiu\
+\
+Enun\uc0\u539 :\
+O agen\uc0\u539 ie imobiliar\u259  gestioneaz\u259  oferte de v\'e2nzare pentru apartamente. Datele se citesc din fi\u537 ier text, se proceseaz\u259  \'een aplica\u539 ie, se trimit \u537 i prin TCP, apoi se persist\u259  \'een MongoDB \u537 i SQLite. La final se realizeaz\u259  o interfa\u539 \u259  grafic\u259  \'een JavaFX.\
+\
+Fi\uc0\u537 ier de intrare: apartamente.txt\
+id;tip;oras;zona;suprafata;pret_mp;discount\
+A01;garsoniera;Bucuresti;Titan;38;2200;0.05\
+A02;2camere;Cluj;Gheorgheni;54;2400;0.00\
+A03;3camere;Brasov;Avantgarden;72;2100;0.08\
+A04;penthouse;Bucuresti;Pipera;120;3000;0.10\
+\
+Fi\uc0\u537 ier de ie\u537 ire: raport_apartamente.txt\
+Total oferte: 4\
+Pret mediu: 136785.0\
+Cele mai scumpe 2:\
+A04;penthouse;Bucuresti;Pipera;324000.0\
+A03;3camere;Brasov;Avantgarden;139104.0\
+\
+Cerin\uc0\u539 e:\
+1. Modelare OOP \'96 10p\
+- Interfa\uc0\u539 \u259  Evaluabil cu metoda pretFinal().\
+- Clas\uc0\u259  abstract\u259  Apartament.\
+- Minimum 3 clase concrete.\
+\
+2. Citire/scriere fi\uc0\u537 iere text \'96 5p\
+- Citirea ofertelor.\
+- Generarea raportului.\
+\
+3. Colec\uc0\u539 ii \u537 i structuri de date \'96 5p\
+- List<Apartament>.\
+- Map sau PriorityQueue.\
+\
+4. Lambda \uc0\u537 i Stream API \'96 10p\
+\
+5. ExecutorService cu mul\uc0\u539 i-threading lambda si acolo unde este cazul sincronizare \'96 15p\
+- Task total valori.\
+- Task top 2 apartamente.\
+- Task raport.\
+\
+6. Socket TCP \'96 15p\
+Comenzi:\
+TOP 2\
+FILTRU BUCURESTI\
+MEDIA\
+\
+* Exemplu:\
+Client: FILTRU BUCURESTI\
+Server: A01;garsoniera;Bucuresti;Titan;81616.0 | A04;penthouse;Bucuresti;Pipera;324000.0\
+\
+7. MongoDB \'96 10p\
+\
+8. SQLite \'96 10p\
+\
+9. JavaFX \'96 10p\
+- Incarcare fisier.\
+- Export raport.\
+\
+\
+\
+=====================================================\
+\
+SUBIECTUL 2 \'96 \'ceNCHIRIERI DE MA\uc0\u536 INI\
+Total: 90 puncte + 10 puncte din oficiu\
+\
+Enun\uc0\u539 :\
+O firm\uc0\u259  de \'eenchirieri auto administreaz\u259  ma\u537 ini disponibile, rezerv\u259 ri \u537 i istoricul \'eenchirierilor. Programul cite\u537 te date din fi\u537 ier text, proceseaz\u259  rezerv\u259 rile, comunic\u259  prin TCP, persist\u259  date \'een MongoDB \u537 i SQLite \u537 i ofer\u259  la final o interfa\u539 \u259  grafic\u259  \'een JavaFX.\
+\
+Fi\uc0\u537 ier de intrare: masini.txt\
+id;marca;model;tip;pretZi;kmInclusi;oras\
+M01;Dacia;Duster;SUV;45;300;Bucuresti\
+M02;VW;Golf;Compacta;40;250;Cluj\
+M03;Toyota;Corolla;Sedan;50;250;Brasov\
+M04;BMW;X5;SUV;120;200;Timisoara\
+\
+Fi\uc0\u537 ier de ie\u537 ire: raport_masini.txt\
+Total masini: 4\
+Pret mediu inchiriere 3 zile: 165.0\
+Cele mai cerute 2:\
+M04;BMW;X5;360.0\
+M03;Toyota;Corolla;150.0\
+\
+Cerin\uc0\u539 e:\
+1. Modelare OOP \'96 10p\
+- Interfa\uc0\u539 \u259  Inchiriabila.\
+- Clas\uc0\u259  abstract\u259  Masina.\
+- Minimum 3 clase concrete.\
+\
+2. Citire/scriere fi\uc0\u537 iere text \'96 5p\
+\
+3. Colec\uc0\u539 ii \u537 i structuri de date \'96 5p\
+- List<Masina>.\
+- Map, Deque sau PriorityQueue.\
+\
+4. Lambda \uc0\u537 i Stream API \'96 10p\
+\
+5. ExecutorService cu mul\uc0\u539 i-threading lambda si acolo unde este cazul sincronizare \'96 15p\
+- Task Calcul pre\uc0\u539 uri.\
+- Task Top 2 ma\uc0\u537 ini \'eenchiriate.\
+- Task Raport.\
+\
+6. Socket TCP \'96 15p\
+Comenzi:\
+DISPONIBILE Cluj\
+PRET M03 5\
+TOP 2\
+\
+* Exemplu:\
+Client: PRET M04 3\
+Server: M04;BMW;X5;360.0\
+\
+7. MongoDB \'96 10p\
+\
+8. SQLite \'96 10p\
+\
+9. JavaFX \'96 10p\
+- Incarcare fisier.\
+- Export raport.}

@@ -1,0 +1,55 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2870
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Fie datele de intrare referitoare la evaluarea unor articole stiitifice primite la editura unei reviste:\
+\
+a) articole.txt - Informatiile referitoare la articole si anume: cod articol (intreg),\
+nume autor (sir de caractere), acronim institutie autor (sir de caractere).\
+Exemplu:\
+1,Pop Marian,ASE\
+2,Popescu Maria,UniBuc\
+...\
+b) evaluari.json - Informatii privind evalurile si anume: cod evaluator (intreg),\
+cod articol (intreg), nivel stiitific (intreg de la 0 la 10), notorietate (intreg de la 0 la 10),\
+citari (intreg de la 0 la 10).\
+Exemplu:\
+[\
+  \{\
+    "Cod evaluator": 1,\
+    "Cod articol": 1,\
+    "Nivel stiintific": 7,\
+    "Notorietate": 6,\
+    "Citari": 5\
+  \},\
+  ...\
+]\
+\
+Cerinte:\
+1) Sa se afiseze la consola numarul de articole primite spre evaluare\
+Barem: 2 puncte\
+Criteriu de acordare a baremului: afisarea corecta a numarului de articole\
+\
+2) Sa se afiseze la consola numarul de evaluari pentru fiecare articol.\
+Pentru fiecare articol se va afisa codul articolului si numarul de evaluari.\
+Barem: 2 puncte\
+Criteriu de acordare a baremului: afisarea corecta a rezultatului (n linii, unde\
+n este numarul de articole)\
+\
+3) Sa se salveze in fisierul jurnal.txt articolele sortate descrescator dupa punctajul mediu\
+obtinut la evaluari. Punctajul obtinut la o evaluare este calculat astfel:\
+Punctaj = Nivel stiintific + Notorietate + Citari\
+Pentru fiecare articol se va afisa codul, numele autorului si punctajul mediu.\
+Barem: 2 puncte\
+Criteriu de acordare: urmarirea continutului fisierului jurnal.txt\
+\
+4) S\uc0\u259  se implementeze func\u539 ionalit\u259 \u539 ile de server \u537 i client TCP/IP \u537 i s\u259  se execute urm\u259 torul scenariu:\
+    - componenta client trimite serverului un cod de articol;\
+    - componenta server va \'eentoarce clientului lista de evaluari corespunzatoare.\
+    - serverul va fi pornit din programul principal pe un fir de execu\uc0\u539 ie nou \u537 i va servi o singur\u259  cerere\
+\
+Punctaj: 3 puncte (2p - comunicare corecta client / server; 1p - pornire server pe fir de execu\uc0\u539 ie nou)\
+Criteriu de acordare a punctajului: afi\uc0\u537 area corect\u259  la consol\u259 }

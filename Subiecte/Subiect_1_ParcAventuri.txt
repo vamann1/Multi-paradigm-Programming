@@ -1,0 +1,61 @@
+SUBIECT 1 - PARC DE AVENTURI
+
+1p oficiu + 9p subiect
+
+In fisierul aventuri.json se gasesc informatii cu privire la activitatile
+disponibile intr-un parc de aventuri. Fisierul este structurat astfel:
+
+[
+  {
+    "cod_aventura": 101,
+    "denumire": "CATARARE",
+    "tarif": 25.5,
+    "locuri_disponibile": 15
+  },
+  ...
+]
+
+In fisierul rezervari.txt se afla informatii cu privire la rezervarile facute
+pentru activitatile din parcul de aventuri, cate o linie pentru fiecare
+rezervare, astfel:
+
+id_rezervare,cod_aventura,nr_locuri_rezervate
+...
+
+id_rezervare este sir de caractere, cod_aventura si nr_locuri_rezervate sunt
+valori intregi.
+
+Sa se scrie o aplicatie Java care sa indeplineasca urmatoarele cerinte:
+
+1) Sa afiseze la consola lista aventurilor care au un numar de locuri disponibile
+   mai mare sau egal cu 20.
+   Punctaj: 2 puncte.
+   Criteriu de acordare a punctajului: afisarea corecta la consola
+
+2) Sa afiseze la consola lista aventurilor care in urma rezervarilor efectuate
+   mai au cel putin 5 locuri disponibile. Pentru fiecare aventura se afisa codul
+   aventurii, denumirea, numarul de locuri disponibile.
+   Punctaj: 2 puncte
+   Criteriu de acordare a punctajului: afisarea corecta la consola
+
+3) Sa salveze in fisierul text venituri.txt valoarea obtinuta din fiecare
+   activitate a parcului de aventuri ca urmare a rezervarilor efectuate.
+   Aventurile sunt scrise in fisier in ordinea alfabetica a denumirii. Pentru
+   fiecare aventura se scrie o linie in fisier in formatul:
+   denumire_aventura,numar_locuri_rezervate,valoare
+   ...
+   Punctaj: 2 puncte
+   Criteriu de acordare a punctajului: urmarirea fisierului venituri.txt
+
+4) Sa implementeze functionalitatile de server si client TCP/IP si sa se execute
+   urmatorul scenariu: componenta client trimite serverului denumirea unei
+   aventuri, iar componenta server va intoarce clientului numarul de locuri
+   disponibile pentru acea aventura. Serverul poate raspunde la oricate cereri
+   din partea clientului.
+   Punctaj:
+   1 punct - afisarea la consola de catre server a denumirii aventurii primite de
+             la client
+   1 punct - afisarea la consola de catre client a numarului de locuri disponibile
+             pentru aventura solicitata
+   1 punct - implementare server multithreaded: fiecare conexiune client este
+             deservita intr-un thread distinct
