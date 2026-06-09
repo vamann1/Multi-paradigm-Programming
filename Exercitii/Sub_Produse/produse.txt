@@ -1,0 +1,5 @@
+1,Stafide 200g,6.03
+2,Seminte de pin 300g, 21.18
+3,Miere 500g, 30.23
+4,Cafea 350g, 40.54
+5,Ceai 150g, 14,84

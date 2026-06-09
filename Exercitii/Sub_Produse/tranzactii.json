@@ -1,0 +1,23 @@
+[
+  {
+    "codProdus": 3,
+    "cantitate": 7,
+    "tip": "intrare"
+  },
+  {
+    "codProdus": 1,
+    "cantitate": 7,
+    "tip": "intrare"
+  },
+  {
+    "codProdus": 1,
+    "cantitate": 2,
+    "tip": "iesire"
+  },
+  {
+    "codProdus": 2,
+    "cantitate": 5,
+    "tip": "iesire"
+  }
+
+]
