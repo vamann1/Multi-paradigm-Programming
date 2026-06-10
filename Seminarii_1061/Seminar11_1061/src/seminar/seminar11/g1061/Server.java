@@ -116,7 +116,7 @@ public class Server implements Closeable {
             System.out.println("Conexiune creata.");
             DatabaseMetaData dbm = c.getMetaData();
             try (ResultSet r = dbm.getTables(null, null, "MIJLOACE_FIXE", new String[]{"TABLE"})) {
-                if (r.next()) {
+                if (r.next()
                     System.out.println("Citire tabela MIJLOACE_FIXE");
                     try(Statement s = c.createStatement();
                     ResultSet rs = s.executeQuery("select * from MIJLOACE_FIXE")){
