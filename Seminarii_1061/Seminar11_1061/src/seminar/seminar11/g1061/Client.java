@@ -104,6 +104,7 @@ public class Client {
                 jsa.put(i, jso);
             }
             jsa.write(out, 8, 0);
+
         }
         catch (Exception ex) {
             System.err.println(ex);
@@ -151,14 +152,8 @@ public class Client {
         catch (Exception ex){
             System.err.println(ex);
         }
-
-
-
         return lista;
     }
-
-
-
 
     private void stop() {
         try (Socket socket = new Socket("localhost", 2222);

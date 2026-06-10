@@ -1,0 +1,20 @@
+Popescu Marian
+apartament: 150000.0, 
+casa: 100000.0, 
+teren: 
+Ionescu Dan
+apartament: 
+casa: 125000.0, 
+teren: 
+Georgescu Laura
+apartament: 950000.0, 
+casa: 
+teren: 50000.0, 
+Timofte Andreea
+apartament: 
+casa: 
+teren: 
+Andreescu Paul
+apartament: 
+casa: 
+teren: 

@@ -62,7 +62,8 @@ public class Server implements Closeable {
         try (ObjectInputStream in = new ObjectInputStream(socket.getInputStream());
              ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream())) {
             String mesaj = in.readObject().toString();
-            switch (mesaj) {
+            switch (mesaj)
+            {
                 case "stop":
                     stop = true;
                     break;

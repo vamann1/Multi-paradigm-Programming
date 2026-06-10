@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Seminar11_1061">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Seminar11_1061/Seminar2_1061.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Seminar11_1061/slf4j-simple-2.0.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Seminar11_1061/sqlite-jdbc-3.45.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Seminar11_1061/slf4j-api-2.0.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Seminar11_1061/json-20251224.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

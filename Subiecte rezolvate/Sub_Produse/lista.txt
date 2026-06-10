@@ -1,0 +1,6 @@
+Denumire Produs, Numar tranzactii
+Cafea 350g 0
+Ceai 150g 0
+Miere 500g 1
+Seminte de pin 300g 1
+Stafide 200g 2
