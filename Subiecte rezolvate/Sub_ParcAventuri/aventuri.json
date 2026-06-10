@@ -1,0 +1,26 @@
+[
+  {
+    "cod_aventura": 101,
+    "denumire": "CATARARE",
+    "tarif": 25.5,
+    "locuri_disponibile": 15
+  },
+  {
+    "cod_aventura": 102,
+    "denumire": "TIROLIANA",
+    "tarif": 40.5,
+    "locuri_disponibile": 10
+  },
+  {
+    "cod_aventura": 103,
+    "denumire": "ROCKCLIMBING",
+    "tarif": 60.3,
+    "locuri_disponibile": 24
+  },
+  {
+    "cod_aventura": 104,
+    "denumire": "OBSTACOLE",
+    "tarif": 20,
+    "locuri_disponibile": 30
+  }
+]

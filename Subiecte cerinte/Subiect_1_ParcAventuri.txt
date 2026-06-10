@@ -19,7 +19,7 @@ In fisierul rezervari.txt se afla informatii cu privire la rezervarile facute
 pentru activitatile din parcul de aventuri, cate o linie pentru fiecare
 rezervare, astfel:
 
-id_rezervare,cod_aventura,nr_locuri_rezervate
+a
 ...
 
 id_rezervare este sir de caractere, cod_aventura si nr_locuri_rezervate sunt
